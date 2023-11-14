@@ -1,11 +1,41 @@
 body{
     margin:0;
     padding:0;
+    background:black
 }
-canvas{
+canvas, header{
     position:fixed;
     left:0;
     top:0;
     width:100%;
+    height:16vh;
+}
+header{
+    color:white;
+    font-size:4vmin;
+    font-weight:900;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform: scaleX(1.5);
+    text-align: center;
+    line-height:8vh;
+}
+nav{
+    position:fixed;
+    left:0;
+    font-size:3vmin;
+    top:8vh;
+    width:100%;
+    height:8vh;
+    line-height:8vh;
+    display: grid;
+    grid-auto-flow: column;
+}
+nav>a{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-decoration: none;
     height:100%;
+    width:100%
 }

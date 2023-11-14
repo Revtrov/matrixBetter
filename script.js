@@ -1,7 +1,7 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = (window.innerHeight/100)*16;
 let characters = [
   "a",
   "b",
@@ -167,7 +167,7 @@ let characters = [
   9,
 ];
 
-ctx.font = "14px monospace";
+ctx.font = "1vmin monospace";
 let getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -177,8 +177,8 @@ let getRandomInt = (min, max) => {
 let createCells = (x, y) => {
   return Array(x * y).fill(0);
 };
-let x = Math.floor(canvas.width/20) ;
-let y = 50;
+let x = Math.floor(canvas.width/10) ;
+let y = Math.floor(canvas.height/10);
 let cells = createCells(x, y);
 let cellBacks = createCells(x, y);
 for (i in cells) {
